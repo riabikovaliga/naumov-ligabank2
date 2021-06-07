@@ -1,0 +1,116 @@
+.contacts__item {
+  box-sizing: border-box;
+  margin-top: 14px;
+  margin-left: 28px;
+
+  &--phone {
+    margin-left: 33px;
+  }
+}
+
+.contacts__link {
+  @include base-font($medium);
+  position: relative;
+  line-height: 22px;
+  color: $main-text-color;
+
+  &:focus,
+  &:hover {
+    color: $button-color;
+  }
+}
+
+.contacts__text {
+  @include reset-text;
+  font-size: 12px;
+  line-height: 17px;
+  width: 64%;
+  color: $grey-text-color;
+}
+
+.contacts__icon {
+  position: absolute;
+
+  &--mobile {
+    top: 1px;
+    left: -29px;
+  }
+
+  &--phone {
+    top: 3px;
+    left: -33px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    width: 75%;
+    margin-top: -6px;
+    margin-left: 103px;
+    order: 3;
+  }
+
+  .contacts__item {
+    width: 100%;
+
+    &--phone {
+      margin-top: 23px;
+    }
+  }
+
+  .contacts__text {
+    width: 33%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: auto;
+    min-width: 37.8%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contacts__item {
+    &--mobile {
+      width: 205px;
+      margin-right: 0;
+      margin-left: 0;
+      padding-top: 28px;
+      padding-left: 8.7%;
+    }
+
+    &--phone {
+      width: 175px;
+      margin-left: 0;
+      padding-top: 20px;
+      padding-left: 11.5%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .contacts__text {
+    width: 100%;
+  }
+
+  .contacts__icon {
+    &--mobile,
+    &--phone {
+      top: 1px;
+    }
+
+    &--mobile {
+      left: -29px;
+    }
+
+    &--phone {
+      left: -33px;
+    }
+  }
+}

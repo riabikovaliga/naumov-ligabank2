@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  min-width: 320px;
+  max-width: 767px;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    min-width: $tablet-width;
+    max-width: $tablet-end-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    min-width: $desktop-width;
+    max-width: $desktop-end-width;
+  }
+}

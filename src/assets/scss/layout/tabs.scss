@@ -1,0 +1,93 @@
+.tabs {
+  max-width: 1170px;
+  margin: 60px auto 0 auto;
+  box-sizing: border-box;
+}
+
+.tabs__list {
+  @include reset-list;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.tabs__item {
+  width: 25%;
+}
+
+.tabs__button {
+  position: relative;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 37px 31% 35px 0;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  text-align: right;
+
+  &--car {
+    padding-right: 30%;
+  }
+
+  &--lock {
+    padding-right: 24%;
+  }
+
+  &--mobile {
+    padding-right: 20%;
+  }
+
+  &:not(.tabs__button--active):hover {
+    color: $button-color;
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &--active {
+    background-color: $background-color;
+  }
+
+  &--piggy::before,
+  &--car::before,
+  &--lock::before,
+  &--mobile::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &--piggy::before {
+    width: 11%;
+    height: 37%;
+    top: 33%;
+    left: calc(50% - 54px);
+    background-image: url("../../img/svg/icon-vault.svg");
+  }
+
+  &--car::before {
+    width: 11%;
+    height: 37%;
+    top: 33%;
+    left: calc(50% - 59px);
+    background-image: url("../../img/svg/icon-cards.svg");
+  }
+
+  &--lock::before {
+    width: 10%;
+    height: 39%;
+    top: 31%;
+    left: calc(50% - 73px);
+    background-image: url("../../img/svg/icon-security.svg");
+  }
+
+  &--mobile::before {
+    width: 7%;
+    height: 59%;
+    top: 31%;
+    left: calc(50% - 87px);
+    background-image: url("../../img/svg/icon-mobile-blue.svg");
+  }
+}

@@ -1,0 +1,114 @@
+.button {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+
+  &--close {
+    margin-top: -1px;
+    margin-right: 1px;
+  }
+
+  &--minus,
+  &--plus {
+    width: 60px;
+    height: 55px;
+  }
+
+  &--minus {
+    top: 33px;
+    left: 2px;
+  }
+
+  &--plus {
+    top: 34px;
+    right: 2px;
+  }
+
+  &:focus,
+  &:hover {
+    color: $button-color;
+    cursor: pointer;
+  }
+
+  &--close:focus,
+  &--close:hover {
+    transform: scale(1.2);
+  }
+
+  &--close:active {
+    transform: scale(0.8);
+  }
+
+  &--eye:active {
+    opacity: $active-opacity;
+  }
+}
+
+.button--minus,
+.button--plus {
+  &:hover:disabled,
+  &:focus:disabled {
+    color: $grey-text-color;
+    opacity: $active-opacity;
+    cursor: initial;
+  }
+}
+
+.button-icon {
+  position: absolute;
+
+  &--login,
+  &--close {
+    top: 5px;
+  }
+
+  &--toggle,
+  &--login {
+    left: 4px;
+  }
+
+  &--toggle {
+    top: 6px;
+  }
+
+  &--login {
+    width: 14px;
+    height: 16px;
+  }
+
+  &--close {
+    left: 5px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    position: relative;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+
+    &--close {
+      margin-top: -4px;
+      margin-right: -6px;
+    }
+
+    &--minus,
+    &--plus {
+      width: 45px;
+      height: 55px;
+    }
+
+    &--minus {
+      left: 10px;
+    }
+
+    &--plus {
+      top: 33px;
+      right: 7px;
+    }
+  }
+}

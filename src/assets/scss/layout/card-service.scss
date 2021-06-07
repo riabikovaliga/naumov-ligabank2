@@ -1,0 +1,535 @@
+.card-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &--piggy,
+  &--car,
+  &--lock,
+  &--mobile,
+  &--piggy-webp,
+  &--car-webp,
+  &--lock-webp,
+  &--mobile-webp {
+    background: no-repeat 100% 39%;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-size: 88px auto;
+    }
+  }
+
+  &--piggy {
+    background-image: url("../../img/jpg/piggybank-mobile@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/jpg/piggybank-mobile@2x.jpg");
+    }
+  }
+
+  &--car {
+    background-image: url("../../img/jpg/car-mobile@1.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/jpg/car-mobile@2x.jpg");
+    }
+  }
+
+  &--lock {
+    background-image: url("../../img/jpg/lock-mobile@1.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/jpg/lock-mobile@2x.jpg");
+    }
+  }
+
+  &--mobile {
+    background-image: url("../../img/jpg/smartphone-mobile@1.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/jpg/smartphone-mobile@2x.jpg");
+    }
+  }
+
+  &--piggy-webp {
+    background-image: url("../../img/webp/piggybank-mobile@1x.webp");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/webp/piggybank-mobile@2x.webp");
+    }
+  }
+
+  &--car-webp {
+    background-image: url("../../img/webp/car-mobile@1.webp");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/webp/car-mobile@2x.webp");
+    }
+  }
+
+  &--lock-webp {
+    background-image: url("../../img/webp/lock-mobile@1.webp");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/webp/lock-mobile@2x.webp");
+    }
+  }
+
+  &--mobile-webp {
+    background-image: url("../../img/webp/smartphone-mobile@1.webp");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/webp/smartphone-mobile@2x.webp");
+    }
+  }
+}
+
+.card-service__title,
+.card-service__link,
+.card-service__description {
+  @include reset-text;
+}
+
+.card-service__list,
+.card-service__link,
+.card-service__description {
+  font-size: 14px;
+}
+
+.card-service__title,
+.card-service__link,
+.card-service__description-link {
+  @include base-font($medium);
+}
+
+.card-service__title {
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  margin-top: 56px;
+
+  &--car {
+    max-width: 208px;
+  }
+
+  &--lock {
+    max-width: 246px;
+  }
+
+  &--mobile {
+    max-width: 223px;
+  }
+}
+
+.card-service__list {
+  @include reset-list;
+  line-height: 18px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.card-service__item {
+  position: relative;
+  max-width: 212px;
+  text-align: left;
+
+  &:not(:first-child) {
+    margin-top: 12px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 4px;
+    left: -17px;
+    background: no-repeat url("../../img/svg/icon-check.svg");
+  }
+}
+
+.card-service__link {
+  line-height: 16px;
+  align-self: center;
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 14px 0 13px 0;
+  background-color: $button-color;
+  color: $background-color;
+  border-radius: 4px;
+
+  &--lock {
+    margin-bottom: 96px;
+  }
+
+  &--mobile {
+    margin-bottom: 51px;
+  }
+}
+
+.card-service__description {
+  line-height: 20px;
+  max-width: 268px;
+  margin-top: -3px;
+  margin-bottom: 83px;
+  text-align: left;
+}
+
+.card-service__description-link {
+  text-decoration: underline;
+  color: $main-text-color;
+
+  &:hover,
+  &:focus {
+    color: $button-color;
+  }
+}
+
+.card-service__link,
+.card-service__description-link {
+  &:hover,
+  &:focus{
+    opacity: $hover-opacity;
+  }
+
+  &:active {
+    opacity: $active-opacity;
+  }
+}
+
+.card-service__list--mobile .card-service__item:first-child {
+  max-width: 175px;
+}
+
+@media (min-width: $tablet-width) {
+  .card-service {
+    padding: 0 45px;
+
+    &--piggy {
+      background-image: url("../../img/jpg/piggybank-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/piggybank-tablet@2x.jpg");
+      }
+    }
+
+    &--car {
+      background-image: url("../../img/jpg/car-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/car-tablet@2x.jpg");
+      }
+    }
+
+    &--lock {
+      background: 91% 44% url("../../img/jpg/lock-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/lock-tablet@2x.jpg");
+      }
+    }
+
+    &--mobile {
+      background: 91% 62% url("../../img/jpg/smartphone-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/smartphone-tablet@2x.jpg");
+      }
+    }
+
+    &--piggy-webp {
+      background-image: url("../../img/webp/piggybank-tablet@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/piggybank-tablet@2x.webp");
+      }
+    }
+
+    &--car-webp {
+      background-image: url("../../img/webp/car-tablet@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/car-tablet@2x.webp");
+      }
+    }
+
+    &--lock-webp {
+      background: 91% 44% url("../../img/webp/lock-tablet@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/lock-tablet@2x.webp");
+      }
+    }
+
+    &--mobile-webp {
+      background: 91% 62% url("../../img/webp/smartphone-tablet@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/smartphone-tablet@2x.webp");
+      }
+    }
+
+    &--piggy,
+    &--car,
+    &--piggy-webp,
+    &--car-webp {
+      background-position: 90% 50%;
+    }
+
+    &--piggy,
+    &--car,
+    &--lock ,
+    &--mobile,
+    &--piggy-webp,
+    &--car-webp,
+    &--lock-webp,
+    &--mobile-webp {
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-size: 289px auto;
+      }
+    }
+  }
+
+  .card-service__item,
+  .card-service__link,
+  .card-service__description {
+    font-size: 16px;
+  }
+
+  .card-service__title {
+    font-size: 18px;
+    line-height: 25px;
+    max-width: 320px;
+
+    &--car {
+      max-width: 234px;
+    }
+
+    &--lock {
+      max-width: 276px;
+    }
+
+    &--mobile {
+      max-width: 333px;
+    }
+  }
+
+  .card-service__list {
+    margin: 22px 0 30px 21px;
+  }
+
+  .card-service__item {
+    line-height: 21px;
+    max-width: 330px;
+
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+
+    &::after {
+      width: 13px;
+      height: 12px;
+      top: 6px;
+      left: -22px;
+      background-size: 100%;
+    }
+  }
+
+  .card-service__link {
+    align-self: flex-start;
+    line-height: 19px;
+    width: 29.2%;
+    padding: 15px 0 14px 0;
+  }
+
+  .card-service__description {
+    line-height: 22px;
+    max-width: 320px;
+    margin-top: 0;
+    margin-bottom: 63px;
+  }
+
+  .card-service__list--mobile .card-service__item {
+    max-width: 329px;
+  }
+
+  .card-service__list--mobile .card-service__item:first-child {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card-service {
+    max-width: 1170px;
+    padding: 0 70px;
+
+    &--piggy,
+    &--piggy-webp {
+      border-radius: 0 4px 4px 4px;
+    }
+
+    &--mobile,
+    &--mobile-webp {
+      border-radius: 4px 0 4px 4px;
+    }
+
+    &--piggy {
+      background-image:  url("../../img/jpg/piggybank-desktop@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/piggybank-desktop@2x.jpg");
+      }
+    }
+
+    &--car {
+      background-image:  url("../../img/jpg/car-desktop@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/car-desktop@2x.jpg");
+      }
+    }
+
+    &--lock {
+      background: 81.5% 49% url("../../img/jpg/lock-desktop@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/lock-desktop@2x.jpg");
+      }
+    }
+
+    &--mobile {
+      background: 81.5% 50% url("../../img/jpg/smartphone-desktop@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/smartphone-desktop@2x.jpg");
+      }
+    }
+
+    &--piggy-webp {
+      background-image:  url("../../img/webp/piggybank-desktop@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/piggybank-desktop@2x.webp");
+      }
+    }
+
+    &--car-webp {
+      background-image:  url("../../img/webp/car-desktop@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/car-desktop@2x.webp");
+      }
+    }
+
+    &--lock-webp {
+      background: 81.5% 49% url("../../img/webp/lock-desktop@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/lock-desktop@2x.webp");
+      }
+    }
+
+    &--mobile-webp {
+      background: 81.5% 50% url("../../img/webp/smartphone-desktop@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/smartphone-desktop@2x.webp");
+      }
+    }
+
+    &--car,
+    &--lock,
+    &--car-webp,
+    &--lock-webp {
+      border-radius: 4px;
+    }
+
+    &--piggy,
+    &--car,
+    &--piggy-webp,
+    &--car-webp {
+      background-position: 81.5% 50%;
+    }
+
+    &--piggy,
+    &--car,
+    &--lock ,
+    &--mobile,
+    &--piggy-webp,
+    &--car-webp,
+    &--lock-webp,
+    &--mobile-webp {
+      background-color: $background-color;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-size: 440px auto;
+      }
+    }
+  }
+
+  .card-service__item,
+  .card-service__description {
+    font-size: 18px
+  }
+
+  .card-service__title {
+    font-size: 22px;
+    line-height: 31px;
+    max-width: 374px;
+    margin-top: 54px;
+
+    &--car {
+      max-width: 288px;
+    }
+
+    &--mobile {
+      max-width: 406px;
+    }
+  }
+
+  .card-service__list {
+    margin-top: 28px;
+    margin-bottom: 33px;
+
+    &--car {
+      margin-bottom: 28px;
+    }
+  }
+
+  .card-service__item {
+    line-height: 23px;
+    max-width: 373px;
+  }
+
+  .card-service__link {
+    width: 19.2%;
+    padding: 17px 0 15px 0;
+    text-align: center;
+
+    &--lock {
+      margin-bottom: 60px;
+    }
+
+    &--mobile {
+      margin-bottom: 60px;
+    }
+  }
+
+  .card-service__description {
+    line-height: 25px;
+    max-width: 338px;
+    margin-bottom: 53px;
+  }
+
+  .card-service__list--mobile .card-service__item {
+    max-width: 335px;
+  }
+
+  .card-service__list--mobile .card-service__item:first-child {
+    max-width: 225px;
+  }
+}

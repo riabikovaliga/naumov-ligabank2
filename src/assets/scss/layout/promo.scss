@@ -1,0 +1,372 @@
+.promo {
+  width: 100%;
+  min-height: 226px;
+
+  &--credit {
+    background-color: $button-color;
+  }
+
+  &--man {
+    background-color: $man-mobile-background-color;
+  }
+
+  &--girl {
+    background-color: $girl-mobile-background-color;
+  }
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 226px;
+  padding-left: clamp(15px, 4%, 268px);
+
+  &--girl,
+  &--man,
+  &--girl-webp,
+  &--man-webp {
+    background: no-repeat center right;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-size: 320px auto;
+    }
+  }
+
+  &--credit {
+    background: no-repeat 100% 61% url("../../img/png/black-card-mobile@1x.png");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/png/black-card-mobile@2x.png");
+      background-size: 105px auto;
+    }
+  }
+
+  &--man {
+    background-image: url("../../img/jpg/man-mobile@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/jpg/man-mobile@2x.jpg");
+    }
+  }
+
+  &--girl {
+    background-image: url("../../img/jpg/girl-mobile@1x.jpg");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/jpg/girl-mobile@2x.jpg");
+    }
+  }
+
+  &--credit-webp {
+    background: no-repeat 100% 61% url("../../img/webp/black-card-mobile@1x.webp");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/webp/black-card-mobile@2x.webp");
+      background-size: 105px auto;
+    }
+  }
+
+  &--man-webp {
+    background-image: url("../../img/webp/man-mobile@1x.webp");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/webp/man-mobile@2x.webp");
+    }
+  }
+
+  &--girl-webp {
+    background-image: url("../../img/webp/girl-mobile@1x.webp");
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../../img/webp/girl-mobile@2x.webp");
+    }
+  }
+}
+
+.promo__title,
+.promo__description,
+.promo__link {
+  @include reset-text;
+}
+
+.promo__title {
+  @include base-font($bold);
+  font-size: 38px;
+  line-height: 45px;
+  margin-top: 39px;
+  color: $main-text-color;
+
+  &--credit {
+    color: $background-color;
+  }
+}
+
+.promo__description {
+  line-height: 19px;
+  margin-top: 6px;
+  color: $description-text-color;
+
+  &--credit {
+    color: $promo-text-color;
+  }
+
+  &--man {
+    max-width: 140px;
+  }
+}
+
+.promo__link {
+  @include base-font($medium);
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 26px;
+  padding: 14px 31px 13px 31px;
+  background-color: $background-color;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $main-text-color;
+
+  &--girl {
+    padding: 15px 37px 12px 37px;
+    background-color: $button-color;
+    color: $background-color;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    width: 100%;
+    min-height: 300px;
+
+    &--man {
+      background: $man-tablet-background-color;
+    }
+
+    &--girl {
+      background: $girl-tablet-background-color;
+    }
+  }
+
+  .promo__wrapper {
+    min-height: 300px;
+    padding-left: clamp(86px, 9%, 92px);
+
+    &--girl,
+    &--man,
+    &--girl-webp,
+    &--man-webp {
+      background: no-repeat center center;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-size: 768px auto;
+      }
+    }
+
+    &--credit {
+      background:
+        no-repeat 85% 56% url("../../img/png/cards-tablet@1x.png"),
+        no-repeat center right url("../../img/svg/promo-background-tablet.svg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background:
+          no-repeat 85% 50%/357px auto url("../../img/png/cards-tablet@2x.png"),
+          no-repeat bottom right/312px auto url("../../img/svg/promo-background-tablet.svg");
+      }
+    }
+
+    &--man {
+      background-image: url("../../img/jpg/man-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/man-tablet@2x.jpg");
+      }
+    }
+
+    &--girl {
+      background-image: url("../../img/jpg/girl-tablet@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/girl-tablet@2x.jpg");
+      }
+    }
+
+    &--credit-webp {
+      background:
+        no-repeat 85% 56% url("../../img/webp/cards-tablet@1x.webp"),
+        no-repeat center right url("../../img/svg/promo-background-tablet.svg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background:
+          no-repeat 85% 50%/357px auto url("../../img/webp/cards-tablet@2x.webp"),
+          no-repeat bottom right/312px auto url("../../img/svg/promo-background-tablet.svg");
+      }
+    }
+
+    &--man-webp {
+      background-image: url("../../img/webp/man-tablet@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/man-tablet@2x.webp");
+      }
+    }
+
+    &--girl-webp {
+      background-image: url("../../img/webp/girl-tablet@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/girl-tablet@2x.webp");
+      }
+    }
+  }
+
+  .promo__title {
+    font-size: 46px;
+    line-height: 54px;
+    margin-top: 66px;
+  }
+
+  .promo__description {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 5px;
+
+    &--man {
+      max-width: inherit;
+    }
+  }
+
+  .promo__link {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 30px;
+    padding: 14px 31px 15px 31px;
+
+    &--girl {
+      padding: 14px 38px 15px 38px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    width: 100%;
+    min-height: 226px;
+
+    &--man {
+      background: $man-desktop-background-color;
+    }
+
+    &--girl {
+      background: $girl-tablet-background-color;
+    }
+  }
+
+  .promo__wrapper {
+    min-height: 400px;
+    padding-left: clamp(92px, 20%, 268px);
+
+    &--man,
+    &--girl,
+    &--man-webp,
+    &--girl-webp {
+      background: no-repeat center center;
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-size: 1366px auto;
+      }
+    }
+
+    &--credit {
+      background:
+        no-repeat 76% 54% url("../../img/png/cards-desktop@1x.png"),
+        no-repeat center center url("../../img/svg/promo-background.svg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background:
+          no-repeat 76% 54%/444px auto url("../../img/png/cards-desktop@2x.png"),
+          no-repeat bottom right url("../../img/svg/promo-background.svg");
+      }
+    }
+
+    &--man {
+      background-image: url("../../img/jpg/man-desktop@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/man-desktop@2x.jpg");
+      }
+    }
+
+    &--girl {
+      background-image: url("../../img/jpg/girl-desktop@1x.jpg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/jpg/girl-desktop@2x.jpg");
+      }
+    }
+
+    &--credit-webp {
+      background:
+        no-repeat 76% 54% url("../../img/webp/cards-desktop@1x.webp"),
+        no-repeat center center url("../../img/svg/promo-background.svg");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background:
+          no-repeat 76% 54%/444px auto url("../../img/webp/cards-desktop@2x.webp"),
+          no-repeat bottom right url("../../img/svg/promo-background.svg");
+      }
+    }
+
+    &--man-webp {
+      background-image: url("../../img/webp/man-desktop@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/man-desktop@2x.webp");
+      }
+    }
+
+    &--girl-webp {
+      background-image: url("../../img/webp/girl-desktop@1x.webp");
+
+      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background-image: url("../../img/webp/girl-desktop@2x.webp");
+      }
+    }
+  }
+
+  .promo__title {
+    font-size: 54px;
+    line-height: 63px;
+    margin-top: 102px;
+  }
+
+  .promo__description {
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 8px;
+  }
+
+  .promo__link {
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 34px;
+    padding: 16px 37px 16px 36px;
+
+    &--girl {
+      padding: 16px 49px 16px 48px;
+    }
+  }
+}
